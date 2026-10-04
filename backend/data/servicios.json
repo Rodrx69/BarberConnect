@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Corte de cabello",
+        "descripcion": "Corte masculino personalizado según tu estilo y tipo de cabello.",
+        "precio": 25
+    },
+    {
+        "id": 2,
+        "nombre": "Arreglo de barba",
+        "descripcion": "Perfilado, recorte y definición de barba para un acabado limpio.",
+        "precio": 20
+    },
+    {
+        "id": 3,
+        "nombre": "Afeitado clásico",
+        "descripcion": "Afeitado tradicional con preparación de la piel y acabado profesional.",
+        "precio": 18
+    },
+    {
+        "id": 4,
+        "nombre": "Cuidado facial",
+        "descripcion": "Limpieza y cuidado facial para refrescar y mejorar la apariencia de la piel.",
+        "precio": 30
+    },
+    {
+        "id": 5,
+        "nombre": "Corte + barba",
+        "descripcion": "Servicio completo que combina corte de cabello y arreglo profesional de barba.",
+        "precio": 40
+    },
+    {
+        "id": 6,
+        "nombre": "Tratamiento capilar",
+        "descripcion": "Tratamiento orientado al cuidado, hidratación y fortalecimiento del cabello.",
+        "precio": 35
+    },
+    {
+        "id": 7,
+        "nombre": "Perfilado de cejas",
+        "descripcion": "Definición y limpieza de cejas para complementar tu estilo.",
+        "precio": 15
+    },
+    {
+        "id": 8,
+        "nombre": "Corte Fade",
+        "descripcion": "Corte degradado realizado con precisión para conseguir una transición limpia y moderna.",
+        "precio": 30
+    },
+    {
+        "id": 9,
+        "nombre": "Corte infantil",
+        "descripcion": "Corte de cabello pensado para niños, realizado con comodidad y atención.",
+        "precio": 20
+    },
+    {
+        "id": 10,
+        "nombre": "Diseño de líneas",
+        "descripcion": "Diseños y líneas personalizadas realizadas con precisión para complementar el corte.",
+        "precio": 15
+    },
+    {
+        "id": 11,
+        "nombre": "Camuflaje de canas",
+        "descripcion": "Aplicación de color para reducir visualmente las canas y conseguir un acabado natural.",
+        "precio": 30
+    },
+    {
+        "id": 12,
+        "nombre": "Coloración de barba",
+        "descripcion": "Aplicación de color para uniformizar el tono de la barba y conseguir un acabado natural.",
+        "precio": 30
+    }
+]

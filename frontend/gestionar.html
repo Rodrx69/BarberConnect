@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Gestionar cita | BarberConnect</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- CSS personalizado -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+<body>
+
+<!--================= HEADER ================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a
+                    class="navbar-brand"
+                    href="index.html"
+                >
+                    Barber<span>Connect</span>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuGestion"
+                    aria-controls="menuGestion"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="menuGestion"
+                >
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="admin.html"
+                            >
+                                Panel de citas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="gestionar.html"
+                            >
+                                Gestionar citas
+                            </a>
+                        </li>
+                    </ul>
+                    <a
+                        href="index.html"
+                        class="btn btn-reserva navbar-btn ms-lg-4"
+                    >
+                        Volver al sitio
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!--================ CONTENIDO PRINCIPAL ==================== -->
+    <main>
+
+        <!-- Encabezado -->
+        <section class="manage-page-header">
+            <div class="container">
+                <p class="section-subtitle">
+                    ADMINISTRACIÓN
+                </p>
+                <h1>
+                    Gestionar cita
+                </h1>
+                <p class="manage-page-description">
+                    Revisa la información de la reserva
+                    y actualiza su estado.
+                </p>
+            </div>
+        </section>
+
+<!--============== GESTIÓN DE CITA ================= -->
+        <section class="manage-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9">
+
+                        <!-- Cargando -->
+                        <div
+                            id="gestionar-cargando"
+                            class="admin-message text-center"
+                        >
+                            <p>
+                                Cargando información de la cita...
+                            </p>
+                        </div>
+
+                        <!-- Error -->
+                        <div
+                            id="gestionar-error"
+                            class="admin-message admin-error d-none"
+                        >
+                            <p>
+                                No fue posible encontrar la cita.
+                            </p>
+                        </div>
+
+                        <!-- Contenido -->
+                        <div
+                            id="gestionar-container"
+                            class="manage-card d-none"
+                        >
+
+                            <!-- Encabezado de la cita -->
+                            <div class="manage-card-header">
+                                <div>
+                                    <p class="section-subtitle">
+                                        INFORMACIÓN DE LA RESERVA
+                                    </p>
+                                    <h2>
+                                        Cita #
+                                        <span id="cita-id"></span>
+                                    </h2>
+                                </div>
+                                <span
+                                    id="cita-estado-actual"
+                                    class="admin-status"
+                                >
+                                </span>
+                            </div>
+
+                            <!-- Datos -->
+                            <div class="row g-4 manage-info">
+
+                                <!-- Cliente -->
+                                <div class="col-12 col-md-6">
+                                    <div class="manage-info-item">
+                                        <span>
+                                            Cliente
+                                        </span>
+                                        <strong id="cita-nombre">
+                                            -
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <!-- DNI -->
+                                <div class="col-12 col-md-6">
+                                    <div class="manage-info-item">
+                                        <span>
+                                            DNI
+                                        </span>
+                                        <strong id="cita-dni">
+                                            -
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="col-12 col-md-6">
+                                    <div class="manage-info-item">
+                                        <span>
+                                            Teléfono
+                                        </span>
+                                        <strong id="cita-telefono">
+                                            -
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <!-- Servicio -->
+                                <div class="col-12 col-md-6">
+                                    <div class="manage-info-item">
+                                        <span>
+                                            Servicio
+                                        </span>
+                                        <strong id="cita-servicio">
+                                            -
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <!-- Fecha -->
+                                <div class="col-12 col-md-6">
+                                    <div class="manage-info-item">
+                                        <span>
+                                            Fecha
+                                        </span>
+                                        <strong id="cita-fecha">
+                                            -
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <!-- Hora -->
+                                <div class="col-12 col-md-6">
+                                    <div class="manage-info-item">
+                                        <span>
+                                            Hora
+                                        </span>
+                                        <strong id="cita-hora">
+                                            -
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cambio de estado -->
+                            <div class="manage-status-section">
+                                <label
+                                    for="nuevo-estado"
+                                    class="form-label"
+                                >
+                                    Cambiar estado de la cita
+                                </label>
+                                <select
+                                    id="nuevo-estado"
+                                    class="form-select"
+                                >
+                                    <option value="Pendiente">
+                                        Pendiente
+                                    </option>
+                                    <option value="Confirmada">
+                                        Confirmada
+                                    </option>
+                                    <option value="Cancelada">
+                                        Cancelada
+                                    </option>
+                                </select>
+                                <div class="manage-actions">
+                                    <button
+                                        id="btn-guardar-estado"
+                                        type="button"
+                                        class="btn btn-reserva"
+                                    >
+                                        Guardar cambios
+                                        <i class="bi bi-check-lg"></i>
+                                    </button>
+                                    <a
+                                        href="admin.html"
+                                        class="btn btn-outline-light"
+                                    >
+                                        Volver al panel
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Mensaje -->
+                            <div
+                                id="mensaje-gestion"
+                                class="reservation-message d-none"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- ==========  FOOTER ========= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>
+                    © 2026 BarberConnect.
+                    Panel administrativo.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/gestionar.js"></script>
+</body>
+</html>

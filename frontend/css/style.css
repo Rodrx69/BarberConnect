@@ -1,0 +1,1219 @@
+/* Variables de color */
+:root {
+    --color-principal: #0b0b0b;
+    --color-secundario: #151515;
+    --color-dorado: #d4af37;
+    --color-texto: #ffffff;
+    --color-gris: #bdbdbd;
+}
+
+
+/* Estilo de desplazamiento suave */
+html {
+    scroll-behavior: smooth;
+    
+}
+#nosotros,
+#contacto {
+    scroll-margin-top: 90px;
+}
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/*==========NAVBAR========== */
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: rgba(0,0,0,0.9);
+    padding: 1rem 0;
+}
+
+/* Estilos del logo de la barra de navegación */
+.navbar-brand {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-brand span {
+    color: var(--color-dorado);
+}
+
+/* Estilos del botón de la barra de navegación */
+.navbar-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Estilos de los enlaces de la barra de navegación */
+.navbar-brand:hover {
+    color: white;
+}
+
+/*=====Estilos de los enlaces de la barra de navegación======*/
+/* Enlaces de navegación */
+.navbar .nav-link {
+    color: var(--color-texto);
+    margin-left: 1rem;
+}
+
+/* Al pasar el mouse o seleccionar el enlace */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--color-dorado);
+}
+
+/* Página actualmente activa */
+.navbar .nav-link.active {
+    color: var(--color-dorado) !important;
+    border-bottom: 2px solid var(--color-dorado);
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+    border: 1px solid var(--color-dorado);
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(212, 175, 55, 0.35);
+}
+
+/* ==========HERO============ */
+/* Contenedor principal del hero */
+.hero {
+    min-height: 100vh;
+    background-image: url("../assets/img/hero-barberconnect.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/*Capa oscura sobre la imagen */
+.hero-overlay{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+}
+
+/* Contenido del hero */
+.hero-content {
+    max-width: 600px;
+}
+
+/*Subtitulo del hero */
+.hero-subtitle{
+    color: var(--color-dorado);
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Título principal */
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+.hero h1 span {
+    color: var(--color-dorado);
+}
+
+/* Texto descriptivo */
+.hero-description {
+    color: var(--color-gris);
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+/* Botones */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ========== CARACTERÍSTICAS DEL HERO ========== */
+.hero-features {
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-top: 1px solid rgba(212, 175, 55, 0.35);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.20);
+    border-radius: 6px;
+}
+
+/* Cada característica */
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    height: 100%;
+}
+
+/* Iconos */
+.feature-icon {
+    color: var(--color-dorado);
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+/* Texto de cada característica */
+.feature-item p {
+    margin: 0;
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Separadores en pantallas grandes */
+@media (min-width: 992px) {
+    .hero-features .col-lg-3:not(:last-child) .feature-item {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        padding-right: 1rem;
+    }
+}
+
+/*========== BOTÓN RESERVA ==========*/
+
+.btn-reserva {
+    background-color: var(--color-dorado);
+    color: black;
+    border: none;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+}
+.btn-reserva:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Botón de reserva específico de la navbar */
+.btn-reserva.navbar-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* ========== SERVICIOS DESTACADOS ========== */
+.services-preview {
+    padding: 5rem 0;
+    background-color: var(--color-secundario);
+}
+
+/* Encabezado de la sección */
+.services-heading {
+    margin-bottom: 2rem;
+}
+
+.section-subtitle {
+    color: var(--color-dorado);
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.services-heading h2 {
+    color: var(--color-texto);
+    font-size: 2.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Tarjeta individual */
+.service-card {
+    height: 100%;
+    padding: 1.8rem;
+    background-color: #0f0f0f;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 8px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-dorado);
+}
+
+/* Imagen superior de la tarjeta */
+.service-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+}
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.service-card:hover .service-image img {
+    transform: scale(1.08);
+}
+
+/* Icono */
+.service-icon {
+    color: var(--color-dorado);
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Nombre del servicio */
+.service-card h3 {
+    color: var(--color-texto);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Descripción */
+.service-card p {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Enlace */
+.service-card a {
+    color: var(--color-dorado);
+    text-decoration: none;
+    font-weight: bold;
+}
+.service-card a:hover {
+    color: white;
+}
+
+/* ========== LLAMADA A LA ACCIÓN ========== */
+.reservation-cta {
+    padding: 4rem 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.12),
+            rgba(0, 0, 0, 0.95)
+        );
+    border-top: 1px solid rgba(212, 175, 55, 0.30);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.20);
+}
+
+/* Título del CTA */
+.reservation-cta h2 {
+    color: var(--color-texto);
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Descripción */
+.cta-description {
+    color: var(--color-gris);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+/* Botón */
+.cta-button {
+    padding: 1rem 1.8rem;
+}
+
+/* ========== FOOTER ========== */
+
+.footer {
+    background-color: #080808;
+
+    padding: 3rem 0 1.5rem;
+}
+
+
+/* Información del footer */
+.footer-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+}
+
+
+/* Iconos principales */
+.footer-icon {
+    color: var(--color-dorado);
+
+    font-size: 1.6rem;
+
+    margin-top: 0.2rem;
+}
+
+
+/* Títulos */
+.footer h3 {
+    color: var(--color-texto);
+
+    font-size: 1.1rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/* Texto */
+.footer p {
+    color: var(--color-gris);
+
+    margin-bottom: 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========== REDES SOCIALES ========== */
+
+.footer-social h3 {
+    margin-bottom: 1rem;
+}
+
+
+.social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.2rem;
+}
+
+
+.social-links a {
+    color: var(--color-dorado);
+
+    font-size: 1.5rem;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+
+.social-links a:hover {
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* Parte inferior del footer */
+.footer-bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.20);
+    text-align: center;
+}
+
+/* ========== SECCIÓN NOSOTROS ========== */
+.about-section {
+    padding: 5rem 0;
+    background-color: var(--color-principal);
+}
+/* Puntos destacados de Nosotros */
+.about-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.about-point {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+.about-point i {
+    color: var(--color-dorado);
+    font-size: 1.3rem;
+}
+
+/* Título principal */
+.about-section h2 {
+    color: var(--color-texto);
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Párrafos */
+.about-section p {
+    color: var(--color-gris);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ========== BLOQUE VISUAL DE NOSOTROS ========== */   
+.about-visual {
+    min-height: 340px;
+    background-image: url("../assets/img/about-barberconnect.png");
+    background-size: cover;
+    background-position: 75% center;
+    border: 1px solid rgba(212, 175, 55, 0.40);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Capa oscura sobre la fotografía */
+.about-visual-overlay {
+    min-height: 340px;
+    padding: 2rem;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.92)
+        );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Icono */
+.about-visual i {
+    color: var(--color-dorado);
+    font-size: 2.3rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Etiqueta pequeña */
+.about-label {
+    color: var(--color-dorado) !important;
+    letter-spacing: 3px;
+    font-size: 0.8rem !important;
+    margin-bottom: 0.7rem !important;
+}
+
+/* Título */
+.about-visual h3 {
+    color: var(--color-texto);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* Descripción */
+.about-visual p {
+    max-width: 420px;
+    margin-bottom: 0;
+}
+
+/* ========== PÁGINA DE SERVICIOS ========== */
+/* Encabezado de la página */
+.services-page-header {
+    padding: 4rem 0 3rem;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.06),
+            rgba(11, 11, 11, 1)
+        );
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+/* Catálogo de servicios */
+.services-catalog {
+    padding: 4rem 0 5rem;
+    background-color: var(--color-secundario);
+    min-height: 400px;
+}
+/* Mensaje de carga */
+#mensaje-carga {
+    color: var(--color-gris);
+    padding: 3rem 0;
+    font-size: 1rem;
+}
+/* Mensaje de error */
+#mensaje-error {
+    color: #dc3545;
+    padding: 2rem;
+    border: 1px solid rgba(220, 53, 69, 0.35);
+    border-radius: 8px;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+/* Tarjetas dinámicas de servicios */
+.service-api-card {
+    height: 100%;
+    padding: 2rem;
+    background-color: #0d0d0d;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+/* Efecto al pasar el mouse */
+.service-api-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-dorado);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+/* Nombre del servicio */
+.service-api-card h2 {
+    color: var(--color-texto);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+/* Descripción */
+.service-api-card p {
+    color: var(--color-gris);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+/* Precio */
+.service-api-price {
+    display: block;
+    color: var(--color-dorado);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+/* Botón de la tarjeta */
+.service-api-card .btn-reserva {
+    align-self: flex-start;
+}
+/* Título de la página */
+.services-page-header h1 {
+    color: var(--color-texto);
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+/* Descripción de la página */
+.services-page-description {
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+/* ========== PÁGINA DE RESERVAS ========== */
+/* Encabezado */
+.reservation-page-header {
+    padding: 4rem 0 3rem;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.06),
+            rgba(11, 11, 11, 1)
+        );
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+/* Título de la página */
+.reservation-page-header h1 {
+    color: var(--color-texto);
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Descripción de la página */
+.reservation-page-description {
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+/* Sección del formulario */
+.reservation-form-section {
+    padding: 4rem 0 5rem;
+    background-color: var(--color-secundario);
+}
+
+/* Contenedor principal */
+#reserva-container {
+    padding: 2.5rem;
+    background-color: #0d0d0d;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Etiquetas */
+#form-reserva .form-label {
+    color: var(--color-texto);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+/* Inputs y select */
+#form-reserva .form-control,
+#form-reserva .form-select {
+    background-color: #151515;
+    color: var(--color-texto);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.8rem 1rem;
+    border-radius: 7px;
+}
+
+/* Placeholder */
+#form-reserva .form-control::placeholder {
+    color: #777;
+}
+
+/* Al seleccionar un campo */
+#form-reserva .form-control:focus,
+#form-reserva .form-select:focus {
+    background-color: #151515;
+    color: var(--color-texto);
+    border-color: var(--color-dorado);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.12);
+}
+
+/* Opciones del select */
+#form-reserva .form-select option {
+    background-color: #151515;
+    color: var(--color-texto);
+}
+
+/* Botón */
+.reservation-submit {
+    margin-top: 0.5rem;
+    padding: 0.85rem 1.8rem;
+}
+
+/* Mensaje posterior al envío */
+/* Mensaje general de reserva */
+.reservation-message {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    animation: aparecerMensaje 0.3s ease;
+}
+/* Círculo que acompaña al mensaje */
+.reservation-message::before {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+/* Mensaje exitoso */
+.mensaje-exito-reserva {
+    color: #b9e6c3;
+    background-color: rgba(25, 135, 84, 0.14);
+    border: 1px solid rgba(25, 135, 84, 0.45);
+    border-left: 4px solid #198754;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.mensaje-exito-reserva::before {
+    content: "✓";
+    color: #ffffff;
+    background-color: #198754;
+}
+/* Mensaje de error */
+.mensaje-error-reserva {
+    color: #ffd6da;
+    background-color: rgba(220, 53, 69, 0.14);
+    border: 1px solid rgba(220, 53, 69, 0.45);
+    border-left: 4px solid #dc3545;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+.mensaje-error-reserva::before {
+    content: "!";
+    color: #ffffff;
+    background-color: #dc3545;
+}
+
+/* Consentimiento y privacidad */
+.privacy-check {
+    color: var(--color-texto);
+    padding: 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    background-color: rgba(212, 175, 55, 0.04);
+}
+.privacy-check .form-check-input {
+    margin-top: 0.25rem;
+    border-color: rgba(212, 175, 55, 0.5);
+    background-color: #151515;
+}
+.privacy-check .form-check-input:checked {
+    background-color: var(--color-dorado);
+    border-color: var(--color-dorado);
+}
+.privacy-check .form-check-label {
+    margin-left: 0.35rem;
+    line-height: 1.5;
+}
+.privacy-note {
+    color: var(--color-gris);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+/* Animación de entrada */
+@keyframes aparecerMensaje {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*========== MEDIA QUERIES ========== */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.97);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.30);
+    }
+    .nav-link {
+        margin-left: 0;
+        padding: 0.7rem 0;
+    }
+    .navbar-btn {
+        margin-top: 0.8rem;
+    }
+}
+
+/* ========== PANEL ADMINISTRATIVO ========== */
+
+/* Encabezado */
+.admin-page-header {
+    padding: 4rem 0 3rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.06),
+            rgba(11, 11, 11, 1)
+        );
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.admin-page-header h1 {
+    color: var(--color-texto);
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.admin-page-description {
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+/* Área principal */
+.admin-dashboard {
+    padding: 4rem 0 5rem;
+    background-color: var(--color-secundario);
+    min-height: 500px;
+}
+
+/* Tarjetas de estadísticas */
+.admin-stat-card {
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #0d0d0d;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Tarjeta activa utilizada como filtro */
+.admin-stat-card-active {
+    border-color: var(--color-dorado);
+    background-color: rgba(212, 175, 55, 0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-dorado);
+}
+
+/* Iconos */
+.admin-stat-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--color-dorado);
+    font-size: 1.4rem;
+}
+
+/* Texto de las estadísticas */
+.admin-stat-card p {
+    color: var(--color-gris);
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.admin-stat-card h2 {
+    color: var(--color-texto);
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Sección de citas */
+.admin-citas-section {
+    padding: 2rem;
+    background-color: #0d0d0d;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 10px;
+}
+.admin-section-heading {
+    margin-bottom: 2rem;
+}
+.admin-section-heading h2 {
+    color: var(--color-texto);
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+/* Mensajes */
+.admin-message {
+    color: var(--color-gris);
+    padding: 2rem 0;
+}
+.admin-error {
+    color: #ffd6da;
+    padding: 1rem;
+    background-color: rgba(220, 53, 69, 0.12);
+    border: 1px solid rgba(220, 53, 69, 0.4);
+    border-radius: 8px;
+}
+
+/* Tabla administrativa */
+.admin-table {
+    margin-bottom: 0;
+    color: var(--color-texto);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+.admin-table thead th {
+    color: var(--color-dorado);
+    background-color: #151515;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 1rem;
+    white-space: nowrap;
+}
+.admin-table tbody td {
+    color: var(--color-gris);
+    background-color: #0d0d0d;
+    padding: 1rem;
+    vertical-align: middle;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+.admin-table tbody tr:hover td {
+    background-color: #141414;
+}
+
+/* Estados de las citas */
+.admin-status {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Estado pendiente */
+.admin-status-pendiente {
+    color: #f3d778;
+    background-color: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+/* Estado confirmado */
+.admin-status-confirmada {
+    color: #b9e6c3;
+    background-color: rgba(25, 135, 84, 0.12);
+    border: 1px solid rgba(25, 135, 84, 0.4);
+}
+
+/* Estado cancelado */
+.admin-status-cancelada {
+    color: #ffd6da;
+    background-color: rgba(220, 53, 69, 0.12);
+    border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+    /* ========== GESTIONAR CITA ========== */
+
+/* Encabezado */
+.manage-page-header {
+    padding: 4rem 0 3rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.06),
+            rgba(11, 11, 11, 1)
+        );
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+
+.manage-page-header h1 {
+    color: var(--color-texto);
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+.manage-page-description {
+    color: var(--color-gris);
+
+    font-size: 1.1rem;
+
+    max-width: 700px;
+
+    margin-bottom: 0;
+}
+
+
+/* Sección principal */
+    .manage-section {
+        padding: 4rem 0 5rem;
+        background-color: var(--color-secundario);
+        min-height: 550px;
+    }
+
+    /* Tarjeta principal */
+    .manage-card {
+        padding: 2.5rem;
+        background-color: #0d0d0d;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Encabezado de la tarjeta */
+    .manage-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .manage-card-header h2 {
+        color: var(--color-texto);
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    /* Información de la cita */
+    .manage-info {
+        margin-bottom: 2.5rem;
+    }
+    .manage-info-item {
+        height: 100%;
+        padding: 1.25rem;
+        background-color: #151515;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+    }
+    .manage-info-item span {
+        display: block;
+        color: var(--color-gris);
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
+    }
+    .manage-info-item strong {
+        color: var(--color-texto);
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    /* Cambio de estado */
+    .manage-status-section {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .manage-status-section .form-label {
+        color: var(--color-texto);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+    .manage-status-section .form-select {
+        max-width: 350px;
+        background-color: #151515;
+        color: var(--color-texto);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 0.8rem 1rem;
+        border-radius: 7px;
+    }
+
+    .manage-status-section .form-select:focus {
+        background-color: #151515;
+        color: var(--color-texto);
+        border-color: var(--color-dorado);
+        box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.12);
+    }
+    .manage-status-section .form-select option {
+        background-color: #151515;
+        color: var(--color-texto);
+    }
+    
+    /* Botones */
+    .manage-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+    }
+
+/* ========== AJUSTES FINALES PARA CELULARES ========== */
+@media (max-width: 768px) {
+    /* Espacio lateral seguro en celulares */
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    /* Evitar que las filas sobresalgan en móvil */
+    .reservation-cta .row,
+    .footer .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .about-section,
+    .services-preview,
+    .reservation-cta {
+        padding: 3.5rem 0;
+    }
+    .about-section h2,
+    .services-heading h2,
+    .reservation-cta h2 {
+        font-size: 1.8rem;
+    }
+    .about-visual,
+    .about-visual-overlay {
+        min-height: 280px;
+    }
+    .service-image {
+        height: 200px;
+    }
+    .cta-button {
+        margin-top: 1.5rem;
+    }
+    .footer {
+        padding-top: 2.5rem;
+    }
+    .reservation-page-header h1 {
+    font-size: 2.2rem;
+}
+
+    /* Ajustes para la sección de reservas */
+    .reservation-form-section {
+        padding: 3rem 0;
+    }
+    #reserva-container {
+        padding: 1.5rem;
+    }
+    .reservation-submit {
+        width: 100%;
+    }
+    .admin-page-header h1 {
+    font-size: 2.2rem;
+}
+
+    /*ajuste para la seccion admin*/
+    .admin-dashboard {
+        padding: 3rem 0;
+    }
+    .admin-citas-section {
+        padding: 1.25rem;
+    }
+    .admin-stat-card {
+        padding: 1.25rem;
+    }
+    .admin-section-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    /*ajuste para la seccion gestionar*/
+    .manage-page-header h1 {
+        font-size: 2.2rem;
+    }
+    .manage-section {
+        padding: 3rem 0;
+    }
+    .manage-card {
+        padding: 1.5rem;
+    }
+    .manage-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .manage-status-section .form-select {
+        max-width: 100%;
+    }
+    .manage-actions {
+        flex-direction: column;
+    }
+    .manage-actions .btn {
+        width: 100%;
+    }
+}

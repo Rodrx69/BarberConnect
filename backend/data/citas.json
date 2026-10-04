@@ -1,0 +1,52 @@
+[
+  {
+    "nombre": "Carlos Pérez",
+    "dni": "12345678",
+    "telefono": "999888777",
+    "servicio": "Corte clásico",
+    "fecha": "2026-10-10",
+    "hora": "15:00",
+    "id": 1,
+    "estado": "Cancelada"
+  },
+  {
+    "nombre": "Luis Ramírez",
+    "dni": "87654321",
+    "telefono": "988777666",
+    "servicio": "Corte + barba",
+    "fecha": "2026-10-11",
+    "hora": "16:30",
+    "id": 2,
+    "estado": "Cancelada"
+  },
+  {
+    "nombre": "Rodrigo Saldaña",
+    "dni": "75456825",
+    "telefono": "974512451",
+    "servicio": "Diseño de líneas",
+    "fecha": "2026-10-23",
+    "hora": "13:30",
+    "id": 3,
+    "estado": "Confirmada"
+  },
+  {
+    "nombre": "Juan Medina",
+    "dni": "51427144",
+    "telefono": "985123456",
+    "servicio": "Camuflaje de canas",
+    "fecha": "2026-10-29",
+    "hora": "17:00",
+    "id": 7,
+    "estado": "Confirmada"
+  },
+  {
+    "nombre": "Carlos Pérez",
+    "dni": "32564578",
+    "telefono": "965744123",
+    "servicio": "Cuidado facial",
+    "fecha": "2026-10-29",
+    "hora": "18:00",
+    "id": 8,
+    "estado": "Pendiente"
+  }
+]
